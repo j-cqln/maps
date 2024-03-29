@@ -64,14 +64,14 @@ ui <- fluidPage(
   
   sidebarLayout(
     sidebarPanel(
-      strong("Early childhood centre proximity to green space"),
-      br(),
+      p(strong("Early childhood centre proximity to green space")),
       p("Click on map markers of centres and spaces for more information. 
         Filter by distance to display all centres within some distance of
         a green space."),
       p("Data from the",
         a("City of Toronto Open Data Portal.",
           href = "https://open.toronto.ca/catalogue/")),
+      br(),
       
       sliderInput("distance_slider", "Distance to closest green space (m)",
                   min = min(earlyon_centres$distance),
